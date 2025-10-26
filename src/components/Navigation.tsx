@@ -1,29 +1,29 @@
-import { Wrench } from "lucide-react";
+import { Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-            <Wrench className="w-6 h-6 text-primary-foreground" />
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b-4 border-primary">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 bg-gradient-primary flex items-center justify-center transform -rotate-6 hover:rotate-6 transition-transform">
+            <Zap className="w-7 h-7 text-primary-foreground" />
           </div>
-          <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            ToolBox
+          <span className="text-2xl font-bold uppercase tracking-wider bg-gradient-primary bg-clip-text text-transparent">
+            CYBERTOOLS
           </span>
         </div>
         
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" className="text-foreground hover:text-primary">
-            Tools
-          </Button>
-          <Button variant="ghost" className="text-foreground hover:text-primary">
-            About
-          </Button>
-          <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90 transition-opacity">
-            Get Started
-          </Button>
+        <div className="flex items-center gap-6">
+          <button className="text-foreground hover:text-primary font-semibold uppercase text-sm tracking-wide transition-colors">
+            TOOLS
+          </button>
+          <button className="text-foreground hover:text-primary font-semibold uppercase text-sm tracking-wide transition-colors">
+            ABOUT
+          </button>
+          <button className="px-6 py-3 bg-gradient-accent text-accent-foreground font-bold uppercase text-sm tracking-wide hover:shadow-neon transition-all transform hover:scale-105">
+            ENTER
+          </button>
         </div>
       </div>
     </nav>

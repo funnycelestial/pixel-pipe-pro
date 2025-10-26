@@ -5,91 +5,110 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const tools = [
   {
-    title: "Web Scraper",
-    description: "Extract data from any website with our powerful scraping tool. Fast, reliable, and easy to use.",
+    title: "WEB SCRAPER",
+    description: "Extract data from websites instantly",
     icon: Globe,
+    rotation: "rotate-2",
+    color: "border-primary",
   },
   {
-    title: "Video Downloader",
-    description: "Download videos from popular platforms in multiple formats and quality options.",
+    title: "VIDEO DL",
+    description: "Download from any platform",
     icon: Download,
+    rotation: "-rotate-1",
+    color: "border-accent",
   },
   {
-    title: "Video Compressor",
-    description: "Reduce video file sizes while maintaining quality. Perfect for sharing and storage.",
+    title: "COMPRESSOR",
+    description: "Shrink files without quality loss",
     icon: Maximize2,
+    rotation: "rotate-3",
+    color: "border-secondary",
   },
   {
-    title: "Photo Converter",
-    description: "Convert images between formats (JPG, PNG, WEBP) with batch processing support.",
+    title: "IMG CONVERT",
+    description: "Transform image formats instantly",
     icon: ImageIcon,
+    rotation: "-rotate-2",
+    color: "border-primary",
   },
   {
-    title: "PDF Tools",
-    description: "Merge, split, compress, and convert PDF documents with ease.",
+    title: "PDF TOOLS",
+    description: "Manipulate PDFs with ease",
     icon: FileText,
+    rotation: "rotate-1",
+    color: "border-accent",
   },
   {
-    title: "URL Shortener",
-    description: "Create short, memorable links and track click analytics in real-time.",
+    title: "URL SHORT",
+    description: "Create tiny links + analytics",
     icon: Scissors,
+    rotation: "-rotate-3",
+    color: "border-secondary",
   },
   {
-    title: "Image Optimizer",
-    description: "Optimize images for web use while preserving visual quality.",
+    title: "IMG OPTIMIZE",
+    description: "Web-ready images in seconds",
     icon: Zap,
+    rotation: "rotate-2",
+    color: "border-primary",
   },
   {
-    title: "Code Formatter",
-    description: "Format and beautify code in multiple programming languages instantly.",
+    title: "CODE FORMAT",
+    description: "Beautify code automatically",
     icon: Code,
+    rotation: "-rotate-1",
+    color: "border-accent",
   },
 ];
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-hero">
+    <div className="min-h-screen bg-gradient-hero overflow-hidden">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
+      <section className="relative pt-32 pb-20">
+        <div className="absolute inset-0 opacity-20">
           <img 
             src={heroBg} 
-            alt="Hero background" 
-            className="w-full h-full object-cover"
+            alt="Cyber background" 
+            className="w-full h-full object-cover animate-float"
           />
         </div>
         
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+        
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl opacity-30 animate-glow" />
+        <div className="absolute bottom-10 right-20 w-40 h-40 bg-accent rounded-full blur-3xl opacity-30 animate-glow" style={{ animationDelay: '1s' }} />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+          <div className="max-w-5xl mx-auto text-center space-y-8">
             <div className="inline-block">
-              <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-                All-in-One Toolkit
+              <span className="px-6 py-3 bg-primary/20 text-primary text-sm font-bold uppercase tracking-wider border-4 border-primary transform -rotate-2 inline-block">
+                CYBER TOOLKIT 2025
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Powerful Tools
+            <h1 className="text-6xl md:text-8xl font-bold leading-tight uppercase tracking-tight">
+              <span className="bg-gradient-primary bg-clip-text text-transparent block">
+                BREAK THE
               </span>
-              <br />
-              <span className="text-foreground">At Your Fingertips</span>
+              <span className="text-foreground block transform -rotate-1">INTERNET</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Access a comprehensive suite of web utilities designed to streamline your workflow. 
-              No signup required, completely free.
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-semibold">
+              No BS. No signups. Just tools that actually work. 
+              <span className="text-accent"> Free forever.</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <button className="px-8 py-4 bg-gradient-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-all hover:scale-105 shadow-glow">
-                Explore Tools
+            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
+              <button className="px-10 py-5 bg-gradient-accent text-accent-foreground font-bold uppercase tracking-wide hover:shadow-neon transition-all transform hover:scale-110 border-4 border-accent-foreground/20">
+                START NOW
               </button>
-              <button className="px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:bg-secondary/80 transition-all hover:scale-105">
-                Learn More
+              <button className="px-10 py-5 bg-transparent text-foreground font-bold uppercase tracking-wide border-4 border-foreground hover:bg-foreground hover:text-background transition-all transform hover:scale-110">
+                BROWSE TOOLS
               </button>
             </div>
           </div>
@@ -100,21 +119,23 @@ const Index = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl font-bold text-foreground">
-              Choose Your Tool
+            <h2 className="text-5xl font-bold text-foreground uppercase tracking-tight">
+              CHOOSE YOUR <span className="bg-gradient-primary bg-clip-text text-transparent">WEAPON</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Select from our collection of professional-grade utilities
+            <p className="text-muted-foreground text-lg uppercase tracking-wide font-semibold">
+              8 TOOLS • ZERO LIMITS • INFINITE POSSIBILITIES
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {tools.map((tool, index) => (
               <ToolCard
                 key={index}
                 title={tool.title}
                 description={tool.description}
                 icon={tool.icon}
+                rotation={tool.rotation}
+                color={tool.color}
               />
             ))}
           </div>
@@ -122,9 +143,11 @@ const Index = () => {
       </section>
       
       {/* Footer */}
-      <footer className="border-t border-border py-12 mt-20">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© 2025 ToolBox. All tools are free to use.</p>
+      <footer className="border-t-4 border-primary py-12 mt-20 bg-background/50">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-muted-foreground font-bold uppercase tracking-wide">
+            © 2025 CYBERTOOLS • BUILT DIFFERENT
+          </p>
         </div>
       </footer>
     </div>
